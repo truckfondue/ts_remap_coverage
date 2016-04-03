@@ -1,0 +1,39 @@
+{
+  "name": "ts_remap_coverage",
+  "version": "1.0.0",
+  "description": "- Test framework   - mocha - Coverage    - istanbul   - remap-istanbul",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "tsd install",
+    "clean": "find -E . -regex './app/.+\\.(js|map)$' -type f | xargs rm && rm -rf ./build",
+    "pretest": "tsc",
+    "test": "istanbul cover _mocha -- ./app/test/*.test.js",
+    "posttest": "cd coverage && remap-istanbul -i coverage.json -o html-report -t html"
+  },
+  "author": "AJ Moore",
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "0.4.0",
+    "mocha": "2.4.5",
+    "power-assert": "1.1.0",
+    "remap-istanbul": "0.3.1"
+  },
+  "dependencies": {
+    "tsd": "^0.6.5",
+    "typescript": "^1.8.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truckfondue/ts_remap_coverage.git"
+  },
+  "keywords": [
+    "typescript",
+    "mocha",
+    "remap-istanbul",
+    "source-maps"
+  ],
+  "bugs": {
+    "url": "https://github.com/truckfondue/ts_remap_coverage/issues"
+  },
+  "homepage": "https://github.com/truckfondue/ts_remap_coverage#readme"
+}
