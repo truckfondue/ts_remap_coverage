@@ -1,9 +1,11 @@
 export class TestTarget {
-    questions: number
-    constructor(n: number) {
-      this.questions = n * 2
+    questions;
+    time;
+    constructor(n, t) {
+      this.questions = n * 2;
+      this.time = t;
     }
     proctorTheTest() {
-      console.log(`today's test is ${this.questions} questions long`)
+      console.log(`today's test is ${this.questions} questions long with ${this.time} minutes`);
     }
 }

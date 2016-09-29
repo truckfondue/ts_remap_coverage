@@ -1,9 +1,11 @@
 {
-  "version": "1.6.2",
+  "version": "2.0.3",
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "sourceMap": true
+    "sourceMap": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "dist",
