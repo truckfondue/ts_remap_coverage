@@ -3,7 +3,7 @@ var power_assert_1 = require('power-assert');
 var main_1 = require('../src/main');
 describe("TestTarget", function () {
     it("should return double the number: n", function () {
-        var testTarget = new main_1.TestTarget(8);
+        var testTarget = new main_1.TestTarget(8, 30);
         power_assert_1.default.equal(testTarget.questions, 16);
     });
     xit("should assert the proctorTheTest method", function () {

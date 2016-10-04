@@ -4,7 +4,7 @@ import {TestTarget} from '../src/main'
 describe("TestTarget", () => {
 
     it("should return double the number: n", () => {
-        let testTarget = new TestTarget(8);
+        let testTarget = new TestTarget(8, 30);
         assert.equal(testTarget.questions, 16);
     })
 
